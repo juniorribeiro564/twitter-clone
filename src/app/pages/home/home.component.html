@@ -2,39 +2,26 @@
 	<app-header />
 </header>
 
-<div class="
-		flex 
-		items-center 
-		justify-center 
-		container mx-auto
-		">
-	<app-new-post />
+<div class="flex items-center justify-center container mx-auto">
+	<app-search></app-search>
 </div>
 
-<div class="
-		flex 
-		flex-col 
-		items-center 
-		justify-center 
-		container 
-		mx-auto" 
-		*ngFor="let tw of tweets">
-	<app-tweet 
-	(click)="deletePost('tweets')" 
-	[TweetMessage]=tw />
+<div class="flex flex-col items-center justify-center container mx-auto" *ngFor="let tw of tweets">
+	<app-home-card (click)="deletePost('tweets')" [TweetMessage]=tw></app-home-card>
 </div>
 
-<div class="
+<!-- <div class="flex flex-col items-center justify-center container mx-auto" *ngFor="let tw of tweets">
+	<app-tweet (click)="deletePost('tweets')" [TweetMessage]=tw></app-tweet>
+</div> -->
+
+<!-- <div class="
 		flex flex-col 
 		items-center 
 		justify-center 
 		container 
-		mx-auto" 
-		*ngFor="let tw of postLocal">
-	<app-tweet 
-	(click)="deletePost('postLocal')" 
-	[TweetMessage]=tw />
-</div>
+		mx-auto" *ngFor="let tw of postLocal">
+	<app-tweet (click)="deletePost('postLocal')" [TweetMessage]=tw />
+</div> -->
 
 <div class="bottom-0 m-auto w-full">
 	<app-footer />

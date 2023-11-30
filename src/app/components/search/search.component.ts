@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 import { MessagesService } from '../../services/messages.service'
 
 @Component({
-	selector: 'app-new-post',
-	templateUrl: './new-post.component.html',
-	styleUrls: ['./new-post.component.css']
+	selector: 'app-search',
+	templateUrl: './search.component.html',
+	styleUrls: ['./search.component.css']
 })
 
-export class NewPostComponent {
-	tweetMessage: string = ""
-	tweetMaxLength: number = 130
-	tweetRemain: number = this.tweetMaxLength
+export class SearchComponent {
+	tweetMessage: string = "";
+	tweetMaxLength: number = 50;
+	tweetRemain: number = this.tweetMaxLength;
 
 	constructor(private service: MessagesService) {
 
